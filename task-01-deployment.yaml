@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: wordpress
+  name: wordpres
   labels:
     app: wordpress
 spec:
@@ -10,6 +10,9 @@ spec:
     matchLabels:
       app: wordpress
   template:
+    metadata:
+      labels:
+        app: wordpress
     spec:
       containers:
       - name: wordpress
